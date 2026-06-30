@@ -1,153 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- Font Awesome CDN Link -->
-<link rel="stylesheet" href="https://cloudflare.com" crossorigin="anonymous">
-
-<title>White Lily</title>
-
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Lily</title>
+    
+    <!-- 1. CORRECT FONT AWESOME CDN LINK PLACED FIRST -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- 2. YOUR LOCAL CUSTOM CSS NEXT -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 3. GOOGLE FONTS LAST -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
-<div class="glitter"></div>
-
-<header>
-
-<nav>
-
-<h2> White Lily</h2>
-
-<ul>
+    <div class="glitter"></div>
+    <header>
+        <nav>
+            <h2>White Lily</h2>
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+        </nav>
+    </header>
 
-</nav>
-
-</header>
-
-  <section class="services-hero">
+    <section class="services-hero">
         <h1>Contact Us</h1>
         <p>For any enquiries or bookings</p>
     </section>
 
-<!-- Contact Details Section -->
-<section class="contact-details-section">
-    <div class="contact-grid">
-        
-        <!-- Cellphone Call Card -->
-        <a href="tel:+27821234567" class="contact-item-card">
-            <div class="contact-icon-box">
-                <i class="fa-solid fa-phone"></i>
-            </div>
-            <h4>Call Us</h4>
-            <p>+27795567346</p>
-        </a>
+    <!-- Contact Details Section -->
+    <section class="contact-details-section">
+        <div class="contact-grid">
+            <!-- Cellphone Call Card -->
+            <a href="tel:+27821234567" class="contact-item-card">
+                <div class="contact-icon-box">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <h4>Call Us</h4>
+                <p>+27795567346</p>
+            </a>
 
-        <!-- WhatsApp Chat Card -->
-        <a href="https://wa.me/27795567346" target="_blank" class="contact-item-card">
-            <div class="contact-icon-box">
-                <i class="fa-brands fa-whatsapp"></i>
-            </div>
-            <h4>WhatsApp</h4>
-            <p>Chat Instantly</p>
-        </a>
+            <!-- WhatsApp Chat Card -->
+            <a href="https://wa.me" target="_blank" class="contact-item-card">
+                <div class="contact-icon-box">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <h4>WhatsApp</h4>
+                <p>Chat Instantly</p>
+            </a>
 
-        <!-- Email Card -->
-        <a href="mailto:info@whitelily.co.za?subject=Service%20Enquiry" class="contact-item-card">
-            <div class="contact-icon-box">
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-            <h4>Email</h4>
-            <p>info@whitelily.co.za</p>
-        </a>
-
-        <!-- Business Hours Section -->
-<section class="hours-section">
-    <div class="hours-card">
-        
-        <div class="hours-header">
-            <h2>Business Hours</h2>
-            <div class="gold-divider-center"></div>
-            <!-- Live Status Marker -->
-            <div class="status-indicator open-status" id="live-status">
-                <span class="status-dot"></span> <span id="status-text">Open Today</span>
-            </div>
+            <!-- Email Card -->
+            <a href="mailto:info@whitelily.co.za?subject=Service%20Enquiry" class="contact-item-card">
+                <div class="contact-icon-box">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <h4>Email</h4>
+                <p>info@whitelily.co.za</p>
+            </a>
         </div>
+    </section>
 
-        <div class="hours-timetable">
-            <div class="timetable-row">
-                <span class="day">Monday - Friday</span>
-                <span class="line-spacer"></span>
-                <span class="time">08:00 – 17:00</span>
+    <!-- Business Hours Section (Moved cleanly out of contact-grid) -->
+    <section class="hours-section">
+        <div class="hours-card">
+            <div class="hours-header">
+                <h2>Business Hours</h2>
+                <div class="gold-divider-center"></div>
+                <!-- Live Status Marker -->
+                <div class="status-indicator open-status" id="live-status">
+                    <span class="status-dot"></span>
+                    <span id="status-text">Open Today</span>
+                </div>
             </div>
-            <div class="timetable-row">
-                <span class="day">Saturday</span>
-                <span class="line-spacer"></span>
-                <span class="time">09:00 – 13:00</span>
+            <div class="hours-timetable">
+                <div class="timetable-row">
+                    <span class="day">Monday - Friday</span>
+                    <span class="line-spacer"></span>
+                    <span class="time">08:00 – 17:00</span>
+                </div>
+                <div class="timetable-row">
+                    <span class="day">Saturday</span>
+                    <span class="line-spacer"></span>
+                    <span class="time">09:00 – 13:00</span>
+                </div>
+                <div class="timetable-row closed-day">
+                    <span class="day">Sunday &amp; Public Holidays</span>
+                    <span class="line-spacer"></span>
+                    <span class="time">Closed</span>
+                </div>
             </div>
-            <div class="timetable-row closed-day">
-                <span class="day">Sunday &amp; Public Holidays</span>
-                <span class="line-spacer"></span>
-                <span class="time">Closed</span>
-            </div>
+            <p class="hours-note">Consultations are strictly by appointment only.</p>
         </div>
+    </section>
 
-        <p class="hours-note">Consultations are strictly by appointment only.</p>
-        
-    </div>
-</section>
+    <footer>
+        <p>© 2026 White Lily</p>
+    </footer>
 
-    </div>
-</section>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const statusContainer = document.getElementById('live-status');
+            const statusText = document.getElementById('status-text');
+            if (!statusContainer || !statusText) return;
 
+            const now = new Date();
+            const day = now.getDay(); 
+            const hour = now.getHours();
+            let isOpen = false;
 
-<footer>
-<p>© 2026 White Lily</p>
-</footer>
+            if (day >= 1 && day <= 5) { 
+                if (hour >= 8 && hour < 17) isOpen = true;
+            } else if (day === 6) { 
+                if (hour >= 9 && hour < 13) isOpen = true;
+            }
 
- <script src="script.js"></script>
-
- <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const statusContainer = document.getElementById('live-status');
-        const statusText = document.getElementById('status-text');
-        
-        if (!statusContainer || !statusText) return;
-
-        const now = new Date();
-        const day = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-        const hour = now.getHours();
-
-        let isOpen = false;
-
-        if (day >= 1 && day <= 5) { // Mon-Fri
-            if (hour >= 8 && hour < 17) isOpen = true;
-        } else if (day === 6) { // Sat
-            if (hour >= 9 && hour < 13) isOpen = true;
-        }
-
-        if (!isOpen) {
-            statusContainer.classList.remove('open-status');
-            statusContainer.classList.add('closed-status');
-            statusText.textContent = 'Closed Now';
-        }
-    });
-</script>
-
-
+            if (!isOpen) {
+                statusContainer.classList.remove('open-status');
+                statusContainer.classList.add('closed-status');
+                statusText.textContent = 'Closed Now';
+            }
+        });
+    </script>
 </body>
-
 </html>
