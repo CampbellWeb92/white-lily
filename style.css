@@ -825,3 +825,26 @@ footer{
     font-style: italic;
     letter-spacing: 1px;
 }
+/* Mobile Responsive Navigation (Screens under 768px wide) */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;   /* Stack the logo and menu vertically */
+        align-items: center;      /* Center both items horizontally */
+        padding: 15px 10px;       /* Give items breathing room */
+        gap: 10px;                /* Separate title from menu */
+    }
+
+    nav ul {
+        flex-direction: row;      /* Keep menu links in a horizontal row */
+        flex-wrap: wrap;          /* Let links wrap to a new line if needed */
+        justify-content: center;  /* Center the links under the heading */
+        padding: 0;
+        margin: 0;
+        gap: 12px;                /* Space out links to make tapping easy */
+    }
+
+    nav ul li a {
+        font-size: 14px;          /* Slightly smaller text for tight spaces */
+        padding: 6px 10px;        /* Ideal tap target size for thumbs */
+    }
+}
