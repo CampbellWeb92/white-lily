@@ -565,6 +565,8 @@ footer {
 .about-image-block {
     position: relative;
     padding: 15px;
+    margin-right: auto; /* Magically pushes the element as far right as possible */
+    max-width: 450px;  /
 }
 
 .about-image-block img {
