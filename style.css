@@ -182,11 +182,69 @@ nav a:hover{
 
 
 /* Footer */
-footer{ 
-    padding:40px; 
-    text-align:center; 
-    color:black; 
+/* Footer Container Base */
+footer {
+    width: 100%;
+    background-color: #111111; /* Change this to match your navbar background color */
+    color: #ffffff;            /* Change this to match your navbar text color */
+    padding: 40px 20px;
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
 }
+
+/* Centered Layout Wrapper */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px; /* Even spacing between Title, Links, and Copyright */
+}
+
+/* Branding Text Matching Nav */
+.footer-content h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+/* Navigation Links Wrapper */
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px; /* Spacing between navigation items */
+}
+
+/* Navigation Link Anchors */
+.footer-content ul li a {
+    color: #ffffff; /* Change this to match your nav link color */
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+/* Interactive Hover Effect */
+.footer-content ul li a:hover {
+    color: #cccccc; /* Subtle color change on hover */
+}
+
+/* Tiny Secondary Copyright Line */
+.footer-content .copyright {
+    font-size: 0.8rem;
+    color: #888888;
+    margin: 10px 0 0 0;
+    letter-spacing: 1px;
+}
+
 
 /* Services Section Layout */
 .services-hero {
