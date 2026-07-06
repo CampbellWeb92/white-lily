@@ -6,15 +6,18 @@
     box-sizing:border-box; 
 }
 
-body { 
-    font-family: 'Cinzel', serif; 
-    color: rgb(182, 174, 174); 
-    overflow-x: hidden; 
-    min-height: 100vh; 
-    
-    /* REPLACED POSITION RULES WITH FLEX LAYOUT */
-    display: flex;
-    flex-direction: column;
+/* Background image for all pages */
+body {
+      font-family: 'Cinzel', serif;
+    margin: 0;
+    min-height: 100vh;
+    background-image: 
+        linear-gradient(rgb(243, 237, 237), rgba(0, 0, 0, 0.65)),
+        url("lily.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* Glitter Background */
@@ -208,7 +211,9 @@ nav ul li a {
     letter-spacing: 2px;
     margin: 0;
 }
-
+.services-hero header {
+    background: transparent;
+}
 /* Fallback safety rule for the entire header content zone */
 header, nav {
     font-family: 'Cinzel', serif !important;
@@ -243,7 +248,7 @@ header, nav {
     }
 }
 
-/* Glitter Background */
+
 /* Glitter Background */
 .glitter { 
     position: fixed; 
@@ -269,6 +274,57 @@ header, nav {
 
 
 /* Hero */
+
+.services-hero {
+    min-height: 70vh;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("images/white-lily-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header inside hero */
+.services-hero header {
+    width: 100%;
+    background: transparent;
+    position: relative;
+    z-index: 10;
+}
+
+/* Navbar layout */
+.services-hero nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+}
+
+/* Hero text */
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+} 
 .hero{ 
     height:40vh; 
     display:flex; 
@@ -1025,7 +1081,7 @@ header, nav {
     font-style: italic;
     letter-spacing: 1px;
 }
-//* --- MOBILE RESPONSIVE MEDIA QUERIES --- */
+/* --- MOBILE RESPONSIVE MEDIA QUERIES --- */
 @media (max-width: 768px) {
     /* Stack navigation items vertically on small screens */
     nav {
@@ -1061,5 +1117,320 @@ header, nav {
     /* Force the footer content lists to wrap evenly without vertical breaks */
     .footer-content ul {
         gap: 12px;
+    }
+}
+/* ============================= */
+/* FULL WEBSITE MOBILE FRIENDLY */
+/* ============================= */
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Make all images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablet screens */
+@media (max-width: 968px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .services-hero {
+        min-height: 55vh;
+        padding: 30px 15px;
+    }
+
+    .services-hero h1,
+    .hero-content h1,
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .services-hero p,
+    .hero-content p,
+    .hero p {
+        font-size: 18px;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        width: 92%;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        width: 92%;
+        text-align: center;
+    }
+
+    .about-text-block {
+        padding: 30px;
+    }
+
+    .gold-divider {
+        margin: 15px auto 25px auto;
+    }
+
+    .about-image-block {
+        margin: 0 auto;
+        max-width: 500px;
+    }
+
+    .about-border-frame {
+        display: none;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .slider,
+    .single-showcase {
+        width: 92%;
+        height: 380px;
+    }
+
+    .slides img {
+        height: 380px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 650px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    nav {
+        position: relative;
+        padding: 15px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-logo {
+        height: 55px;
+    }
+
+    .logo-container h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        border: 1px solid rgba(255, 215, 0, 0.25);
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.35);
+    }
+
+    .services-hero {
+        min-height: 50vh;
+        padding: 20px 15px;
+    }
+
+    .services-hero h1,
+    .hero-content h1,
+    .hero h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .services-hero p,
+    .hero-content p,
+    .hero p {
+        font-size: 15px;
+        color: white;
+        line-height: 1.5;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 45vh;
+        padding: 60px 20px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+        width: 92%;
+        gap: 25px;
+    }
+
+    .service-card h3 {
+        font-size: 20px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+    }
+
+    .card-image-box {
+        height: 220px;
+    }
+
+    .contact-details-section {
+        width: 92%;
+        margin: 35px auto;
+    }
+
+    .contact-item-card {
+        padding: 25px 15px;
+    }
+
+    .about-section {
+        padding: 50px 0;
+    }
+
+    .about-text-block {
+        padding: 25px 18px;
+    }
+
+    .about-text-block h2,
+    .team-header h2,
+    .hours-header h2 {
+        font-size: 28px;
+    }
+
+    .about-lead {
+        font-size: 17px;
+    }
+
+    .about-text-block p {
+        font-size: 14.5px;
+    }
+
+    .about-image-block img {
+        height: 350px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .team-section {
+        width: 92%;
+        margin: 40px auto 70px auto;
+    }
+
+    .team-card {
+        padding: 30px 18px;
+    }
+
+    .hours-card {
+        width: 92% !important;
+        padding: 30px 18px !important;
+    }
+
+    .timetable-row {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .line-spacer {
+        display: none;
+    }
+
+    .slider,
+    .single-showcase {
+        height: 280px;
+        border-radius: 15px;
+    }
+
+    .slides img {
+        height: 280px;
+    }
+
+    .slider-btn {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+
+    .prev-btn {
+        left: 10px;
+    }
+
+    .next-btn {
+        right: 10px;
+    }
+
+    footer {
+        padding: 25px 15px;
+    }
+
+    .footer-content ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 400px) {
+
+    .services-hero h1,
+    .hero-content h1,
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .logo-container h2 {
+        font-size: 1rem;
+    }
+
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    .slider,
+    .single-showcase {
+        height: 230px;
+    }
+
+    .slides img {
+        height: 230px;
     }
 }
