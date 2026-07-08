@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
     background-image: 
         linear-gradient(rgb(243, 237, 237), rgba(0, 0, 0, 0.65)),
-        url("lily.png");
+        url("lily2.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -258,7 +258,6 @@ header, nav {
     /* CRITICAL FIXES: These allow your mouse clicks to pass right through the glitter to the link below */
     pointer-events: none; 
     z-index: 1; 
-    
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6)) drop-shadow(0 1px 1px rgba(0,0,0,0.8)); 
     background-image: radial-gradient(circle,#FFD700 1.5px,transparent 2.5px), radial-gradient(circle,#fff 1.5px,transparent 2.5px); 
     background-size: 120px 120px; 
@@ -275,11 +274,11 @@ header, nav {
 
 /* Hero */
 
-.services-hero {
+.hero {
     min-height: 70vh;
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-        url("images/white-lily-background.png");
+        linear-gradient(rgba(255, 255, 255, 0.59), rgba(0, 0, 0, 0.55)),
+        url("images/whitemsg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
