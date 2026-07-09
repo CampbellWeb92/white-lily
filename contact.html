@@ -10,11 +10,10 @@
 <link rel="preconnect" href="https://gstatic.com" crossorigin>
 <link href="https://googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <div class="glitter"></div>
+
 
        <header>
     <nav>
@@ -112,29 +111,6 @@
 </footer>
 
     <script src="script.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const statusContainer = document.getElementById('live-status');
-            const statusText = document.getElementById('status-text');
-            if (!statusContainer || !statusText) return;
 
-            const now = new Date();
-            const day = now.getDay(); 
-            const hour = now.getHours();
-            let isOpen = false;
-
-            if (day >= 1 && day <= 5) { 
-                if (hour >= 8 && hour < 17) isOpen = true;
-            } else if (day === 6) { 
-                if (hour >= 9 && hour < 13) isOpen = true;
-            }
-
-            if (!isOpen) {
-                statusContainer.classList.remove('open-status');
-                statusContainer.classList.add('closed-status');
-                statusText.textContent = 'Closed Now';
-            }
-        });
-    </script>
 </body>
 </html>

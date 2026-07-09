@@ -10,15 +10,12 @@
 <link rel="preconnect" href="https://gstatic.com" crossorigin>
 <link href="https://googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cloudflare.com">
-<!-- Font Awesome CDN Link -->
-<link rel="stylesheet" href="https://cloudflare.com" crossorigin="anonymous" referrerpolicy="no-referrer">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 <body>
 
-<div class="glitter"></div>
+
 
    <header>
     <nav>
@@ -62,51 +59,6 @@
     </div>
 </footer>
 
- <!-- INLINE JAVASCRIPT: Bypasses the need for an external script.js file -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            let counter = 0;
-            const slidesContainer = document.querySelector('.slides');
-            const totalSlides = document.querySelectorAll('.slides img').length;
-            const prevBtn = document.querySelector('.prev-btn');
-            const nextBtn = document.querySelector('.next-btn');
-
-            if (!slidesContainer || !prevBtn || !nextBtn) {
-                console.error("Slider components missing from the DOM.");
-                return;
-            }
-
-            function moveSlider() {
-                slidesContainer.style.transform = `translateX(-${counter * 100}%)`;
-            }
-
-            function nextSlide() {
-                counter = (counter + 1) % totalSlides;
-                moveSlider();
-            }
-
-            function prevSlide() {
-                counter = (counter - 1 + totalSlides) % totalSlides;
-                moveSlider();
-            }
-
-            nextBtn.addEventListener('click', () => {
-                nextSlide();
-                resetTimer();
-            });
-
-            prevBtn.addEventListener('click', () => {
-                prevSlide();
-                resetTimer();
-            });
-
-            let slideInterval = setInterval(nextSlide, 6000);
-
-            function resetTimer() {
-                clearInterval(slideInterval);
-                slideInterval = setInterval(nextSlide, 6000);
-            }
-        });
-    </script>
+<script src="script.js"></script>
 </body>
 </html>
