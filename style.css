@@ -33,6 +33,48 @@ body {
   background-attachment: fixed;
 }
 
+body {
+  position: relative;
+}
+
+.glitter {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(circle, rgba(255, 215, 0, 0.55) 1.2px, transparent 2.4px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.45) 1.2px, transparent 2.4px);
+  background-size: 120px 120px;
+  opacity: 0.55;
+  animation: glitterMove 40s linear infinite;
+}
+
+header,
+main,
+section,
+footer,
+.service-card,
+.contact-item-card,
+.about-text-block,
+.team-card,
+.hours-card,
+.slider,
+.single-showcase,
+.about-image-block,
+.profile-frame {
+  position: relative;
+  z-index: 2;
+}
+
+.service-card,
+.contact-item-card,
+.about-text-block,
+.team-card,
+.hours-card {
+  background: rgba(20, 20, 20, 0.92);
+}
+
 main {
   flex: 1;
 }
