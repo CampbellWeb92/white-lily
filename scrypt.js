@@ -1,47 +1,55 @@
-document.addEventListener("DOMContentLoaded", () => {
-    let counter = 0;
-    const slidesContainer = document.querySelector('.slides');
-    const totalSlides = document.querySelectorAll('.slides img').length;
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
+document.addEventListener("DOMContentLoaded", function () {
+    const slidesContainer = document.querySelector(".slides");
+    const slides = document.querySelectorAll(".slides img");
+    const previousButton = document.querySelector(".prev-btn");
+    const nextButton = document.querySelector(".next-btn");
 
-    // Safe check to verify your HTML tags are read correctly
-    if (!slidesContainer || !prevBtn || !nextBtn) {
-        console.error("Slider elements are missing from your HTML structure.");
+    if (
+        !slidesContainer ||
+        slides.length === 0 ||
+        !previousButton ||
+        !nextButton
+    ) {
+        console.error("Gallery slider elements could not be found.");
         return;
     }
 
-    function moveSlider() {
-        // Shift container left based on current active image index
-        slidesContainer.style.transform = `translateX(-${counter * 100}%)`;
+    let currentSlide = 0;
+    let slideTimer;
+
+    function showSlide(index) {
+        currentSlide = index;
+        slidesContainer.style.transform =
+            `translateX(-${currentSlide * 100}%)`;
     }
 
-    function nextSlide() {
-        counter = (counter + 1) % totalSlides;
-        moveSlider();
+    function showNextSlide() {
+        const nextIndex = (currentSlide + 1) % slides.length;
+        showSlide(nextIndex);
     }
 
-    function prevSlide() {
-        counter = (counter - 1 + totalSlides) % totalSlides;
-        moveSlider();
+    function showPreviousSlide() {
+        const previousIndex =
+            (currentSlide - 1 + slides.length) % slides.length;
+
+        showSlide(previousIndex);
     }
 
-    // Click triggers
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetTimer();
+    function restartTimer() {
+        clearInterval(slideTimer);
+        slideTimer = setInterval(showNextSlide, 4000);
+    }
+
+    nextButton.addEventListener("click", function () {
+        showNextSlide();
+        restartTimer();
     });
 
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetTimer();
+    previousButton.addEventListener("click", function () {
+        showPreviousSlide();
+        restartTimer();
     });
 
-    // Automated loop timer
-    let slideInterval = setInterval(nextSlide, 4000);
-
-    function resetTimer() {
-        clearInterval(slideInterval);
-        slideInterval = setInterval(nextSlide, 4000);
-    }
+    showSlide(0);
+    restartTimer();
 });

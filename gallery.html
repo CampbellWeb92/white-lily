@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>White Lily</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Paste this inside the <head> of EVERY HTML file -->
-<link rel="preconnect" href="https://googleapis.com">
-<link rel="preconnect" href="https://gstatic.com" crossorigin>
-<link href="https://googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -41,9 +39,9 @@
     </section><br>
 
 <!-- HTML Structure -->
-<section class="slider">
-    <button class="slider-btn prev-btn">&#10094;</button>
-    <button class="slider-btn next-btn">&#10095;</button>
+<section class="slider" tabindex="0" aria-label="White Lily image gallery">
+    <button class="slider-btn prev-btn" type="button" aria-label="Previous image">&#10094;</button>
+    <button class="slider-btn next-btn" type="button" aria-label="Next image">&#10095;</button>
     <div class="slides">
         <img src="images/whitehotstone.png" alt="Slide 1">
         <img src="images/1.png" alt="Slide 2">
@@ -60,5 +58,6 @@
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
